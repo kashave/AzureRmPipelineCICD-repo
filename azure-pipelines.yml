@@ -16,7 +16,7 @@ steps:
     azureResourceManagerConnection: 'ARMTemplateCiCD'
     subscriptionId: '5761586f-99b8-4741-80df-d6143a7b7bac'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'AzureRmPipeline-rg1405'
+    resourceGroupName: 'AzureRmPipeline-rg140512'
     location: 'Central US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/kashave/AzureRmPipelineCICD-repo/main/CreateWebApp/azuredeploy.json'
