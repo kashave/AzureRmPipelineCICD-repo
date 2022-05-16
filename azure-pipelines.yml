@@ -8,10 +8,8 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
 steps:- 
-
-  - task: AzureResourceManagerTemplateDeployment@3
+  - task:AzureResourceManagerTemplateDeployment@33
     inputs:
       deploymentScope: 'Resource Group'
       azureResourceManagerConnection: 'ARMTemplateCiCD'
@@ -24,8 +22,8 @@ steps:-
       overrideParameters: '-projectName testarmtemplate1605'
       deploymentMode: 'Incremental'
       deploymentName: 'ARMTemplate1605'
-      
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
+  - script: |
+      echo Add other tasks to build, test, and deploy your project.
+      echo See https://aka.ms/yaml
+    displayName: 'Run a multi-line script'
