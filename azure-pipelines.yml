@@ -9,23 +9,22 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'ARMTemplateCiCD'
-    subscriptionId: '5761586f-99b8-4741-80df-d6143a7b7bac'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'AzureRmPipeline-rg1505'
-    location: 'Central US'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/kashave/AzureRmPipelineCICD-repo/main/CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName myarmpipeline'
-    deploymentMode: 'Incremental'
-    deploymentName: 'DeployPipelineTemplate'
-    addSpnToEnvironment: true
+steps:- 
 
-
+  - task: AzureResourceManagerTemplateDeployment@3
+    inputs:
+      deploymentScope: 'Resource Group'
+      azureResourceManagerConnection: 'ARMTemplateCiCD'
+      subscriptionId: '5761586f-99b8-4741-80df-d6143a7b7bac'
+      action: 'Create Or Update Resource Group'
+      resourceGroupName: 'azureapp-auto-alerts-3a48c4-kk0405_hotmail_com'
+      location: 'Central India'
+      templateLocation: 'URL of the file'
+      csmFileLink: 'https://raw.githubusercontent.com/kashave/AzureRmPipelineCICD-repo/main/CreateWebApp/azuredeploy.json'
+      overrideParameters: '-projectName testarmtemplate1605'
+      deploymentMode: 'Incremental'
+      deploymentName: 'ARMTemplate1605'
+      
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
